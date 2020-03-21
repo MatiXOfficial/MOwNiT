@@ -1,0 +1,2 @@
+Machine epsilon for float: 5.96046e-008
+Machine epsilon for double: 1.11022e-016

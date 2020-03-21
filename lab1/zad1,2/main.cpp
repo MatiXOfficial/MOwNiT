@@ -1,4 +1,3 @@
-#include <iostream>
 #include <vector>
 #include <fstream>
 #include <math.h>
@@ -11,7 +10,11 @@ constexpr int N = 1e+7;
 constexpr float val = 0.7;
 constexpr int step = 25000;
 
+
+float iterativeSum(vector<float> &arr);
+
 float recursiveSum(vector<float> &arr, int p, int r);
+
 float kahanSum(vector<float> &arr);
 
 int main()
@@ -25,30 +28,27 @@ int main()
     // 1.1, 1.2 -----------------------------------------
     resultsFile << "1.1, 1.2" << endl;
     float trueSum = N * val;
-    float arrSum = 0;
-    auto startIteration = chrono::high_resolution_clock::now();    // 1.6
-    for (auto el : arr)
-    {
-        arrSum += el;
-    }
-    auto endIteration = chrono::high_resolution_clock::now();      // 1.6
+    auto startIterative = chrono::high_resolution_clock::now();    // 1.6
+    float arrSum = iterativeSum(arr);
+    auto endIterative = chrono::high_resolution_clock::now();      // 1.6
+    resultsFile << "Calculated sum of array elements: " << arrSum << endl;
     float absoluteError = abs(trueSum - arrSum);
     float relativeError = absoluteError / trueSum;
     resultsFile << "Absolute error: " << absoluteError << ", Relative error: " << relativeError << endl << endl;
 
     // 1.3 ----------------------------------------------
     resultsFile << "1.3" << endl;
-    resultsFile << "Iteration number Absolute error Relative error" << endl;
+    resultsFile << "Iteration number, Relative error" << endl;
     trueSum = 0, arrSum = 0;
     for (int i = 0; i < N; i++)
     {
         arrSum += arr[i];
         if ((i + 1) % step == 0)
         {
-            trueSum = i * val;
+            trueSum = (i + 1) * val;
             absoluteError = abs(trueSum - arrSum);
             relativeError = absoluteError / trueSum;
-            resultsFile << setw(8) << i + 1 << setw(10) << absoluteError << setw(14) << relativeError << endl; 
+            resultsFile << i + 1 << "\t" << relativeError << endl; 
         }
     }
     resultsFile << endl;
@@ -65,7 +65,7 @@ int main()
 
     // 1.6 ----------------------------------------------
     resultsFile << "1.6" << endl;
-    chrono::duration<double> durationIteration = endIteration - startIteration;
+    chrono::duration<double> durationIteration = endIterative - startIterative;
     chrono::duration<double> durationRecursive = endRecursive - startRecursive;
     resultsFile << "Iteration summing time: " << durationIteration.count() << " s" << endl;
     resultsFile << "Recursive summing time: " << durationRecursive.count() << " s" << endl << endl;
@@ -83,11 +83,20 @@ int main()
     resultsFile << "2.3" << endl;
     chrono::duration<double> durationKahan = endKahan - startKahan;
     resultsFile << "Kahan summing time: " << durationKahan.count() << " s" << endl;
-    resultsFile << "Recursive summing time: " << durationRecursive.count() << " s" << endl;
+    resultsFile << "Recursive summing time: " << durationRecursive.count() << " s" << endl << endl;
 
     resultsFile.close();
 }
 
+float iterativeSum(vector<float> &arr)
+{
+    float sum = 0;
+    for (auto el : arr)
+    {
+        sum += el;
+    }
+    return sum;
+}
 
 float recursiveSum(vector<float> &arr, int p, int r)
 {
