@@ -32,12 +32,13 @@ int main()
     {
         floatSeries.push_back({1.0 / 4.0});
         doubleSeries.push_back({1.0 / 4.0});
-        for (int j = 1; j <= seriesLength[i]; j++)
+        for (int j = 1; j < seriesLength[i]; j++)
         {
             floatSeries[i].push_back(floatSeries[i][j - 1] / 2.0);
             doubleSeries[i].push_back(doubleSeries[i][j - 1] / 2.0);
         }
     }
+    cout << endl;
     resultsFile << "Iterative sum: " << endl;
     printIterativeResults(resultsFile, "float", seriesLength, floatSeries);
     printIterativeResults(resultsFile, "double", seriesLength, doubleSeries);
@@ -78,11 +79,11 @@ template <class T>
 void printIterativeResults(ofstream &resultsFile, string title, vector<int> &seriesLength, vector<T> &series)
 {
     resultsFile << title << endl;
-    resultsFile << setw(4) << "N" << setw(36) << "FORWARD" << setw(36) << "BACKWARD" << endl;
+    resultsFile << setw(4) << "N" << setw(56) << "FORWARD" << setw(56) << "BACKWARD" << endl;
     for (int i = 0; i < seriesLength.size(); i++)
     {
-        resultsFile << setw(4) << seriesLength[i] << setw(36) << setprecision(32) << iterativeSum(series[i])
-        << setw(36) << setprecision(32) << iterativeSumBackward(series[i]) << endl;
+        resultsFile << setw(4) << seriesLength[i] << setw(56) << setprecision(52) << iterativeSum(series[i])
+        << setw(56) << setprecision(52) << iterativeSumBackward(series[i]) << endl;
     }   
 }
 
@@ -105,9 +106,9 @@ template <class T>
 void printKahanResults(ofstream &resultsFile, string title, vector<int> &seriesLength, vector<T> &series)
 {
     resultsFile << title << endl;
-    resultsFile << setw(4) << "N" << setw(36) << "kahanSum" << endl;
+    resultsFile << setw(4) << "N" << setw(56) << "kahanSum" << endl;
     for (int i = 0; i < seriesLength.size(); i++)
     {
-        resultsFile << setw(4) << seriesLength[i] << setw(36) << setprecision(32) << kahanSum(series[i]) << endl;
+        resultsFile << setw(4) << seriesLength[i] << setw(56) << setprecision(52) << kahanSum(series[i]) << endl;
     }   
 }
