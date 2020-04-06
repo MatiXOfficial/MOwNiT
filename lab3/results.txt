@@ -1,0 +1,51 @@
+Bisection
+fun 1, start = 4.71239, end = 6.28319
+eps: 1e-007, result: 4.7300407137759519216 after 23 iterations
+eps: 1e-015, result: 4.7300407448627046492 after 50 iterations
+eps: 1e-033, result: 4.730040744862703761 after 51 iterations
+--------------------------------------
+fun 2, start = 9.9999999999999995475e-007, end = 1.5707953267948966403
+eps: 1e-007, result: 0.86033364741131546083 after 23 iterations
+eps: 1e-015, result: 0.86033358901937950769 after 50 iterations
+eps: 1e-033, result: 0.86033358901937972973 after 52 iterations
+--------------------------------------
+fun 3, start = 1, end = 3
+eps: 1e-007, result: 1.829383552074432373 after 24 iterations
+eps: 1e-015, result: 1.8293836019338494125 after 50 iterations
+---->eps: 1e-033, not finished after 1000 iterations
+--------------------------------------
+=================================================
+Newton
+fun 1, start = 5, end = 6
+eps: 1e-007, result: 4.7300407448627135309 after 3 iterations
+eps: 1e-015, result: 4.730040744862703761 after 5 iterations
+eps: 1e-033, result: 4.730040744862703761 after 5 iterations
+--------------------------------------
+fun 2, start = 9.9999999999999995475e-007, end = 1.5707953267948966403
+eps: 1e-007, result: 0.86033358901937972973 after 23 iterations
+eps: 1e-015, result: 0.86033358901937972973 after 24 iterations
+eps: 1e-033, result: 0.86033358901937972973 after 24 iterations
+--------------------------------------
+fun 3, start = 1, end = 3
+eps: 1e-007, result: 1.8293836019338489685 after 8 iterations
+eps: 1e-015, result: 1.8293836019338487464 after 9 iterations
+eps: 1e-033, result: 1.8293836019338487464 after 10 iterations
+--------------------------------------
+=================================================
+solveSecant
+fun 1, start = 4.712388980384689674, end = 6.283185307179586232
+eps: 1e-007, result: 4.730040744862703761 after 5 iterations
+eps: 1e-015, result: 4.730040744862703761 after 6 iterations
+eps: 1e-033, result: 4.730040744862703761 after 6 iterations
+--------------------------------------
+fun 2, start = 9.9999999999999995475e-007, end = 1.5707953267948966403
+eps: 1e-007, result: 0.8603335890193830604 after 5 iterations
+eps: 1e-015, result: 0.86033358901937972973 after 7 iterations
+eps: 1e-033, result: 0.86033358901937972973 after 7 iterations
+--------------------------------------
+fun 3, start = 1, end = 3
+eps: 1e-007, result: 1.8293836019338489685 after 9 iterations
+eps: 1e-015, result: 1.8293836019338487464 after 10 iterations
+eps: 1e-033, result: 1.8293836019338487464 after 11 iterations
+--------------------------------------
+=================================================
