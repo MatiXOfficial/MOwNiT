@@ -7,3 +7,7 @@ Semester 4 - Computational Methods in Science and Technology course at AGH UST
   - bisection method,
   - Newton's method,
   - secant method;
+- lab4 - interpolation:
+  - Lagrange polynomials,
+  - Newton polynomials,
+  - Hermite polynomials;
