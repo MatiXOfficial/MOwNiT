@@ -11,3 +11,6 @@ Semester 4 - Computational Methods in Science and Technology course at AGH UST
   - Lagrange polynomials,
   - Newton polynomials,
   - Hermite polynomials;
+- lab5 - approximation:
+  - least squares approximation - algebraic polynomials,
+  - least squares approximation - trigonometric polynomials;
