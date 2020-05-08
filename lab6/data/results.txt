@@ -1,0 +1,32 @@
+Optimal numbers of iterations
+-----------------------------
+Equation no: 1
+      jacobi: 31
+gauss-seidel: 15
+         sor: 7 (1.13)
+-----------------------------
+Equation no: 2
+      jacobi: 18
+gauss-seidel: 12
+         sor: 11 (0.93)
+-----------------------------
+Equation no: 3
+      jacobi: 30
+gauss-seidel: 10
+         sor: 10 (0.99)
+-----------------------------
+Equation no: 4
+      jacobi: 17
+gauss-seidel: 7
+         sor: 6 (1.02)
+-----------------------------
+Equation no: 5
+      jacobi: 13
+gauss-seidel: 8
+         sor: 6 (0.94)
+-----------------------------
+Equation no: 6
+      jacobi: 24
+gauss-seidel: 10
+         sor: 8 (1.02)
+-----------------------------
