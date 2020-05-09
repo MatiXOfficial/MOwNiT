@@ -15,6 +15,6 @@ Semester 4 - Computational Methods in Science and Technology course at AGH UST
   - least squares approximation - algebraic polynomials,
   - least squares approximation - trigonometric polynomials;
 - lab6 - iterative methods for solving linear equations:
-  - Jacobie method,
+  - Jacobi method,
   - Gauss-Seidel method,
   - SOR method;
