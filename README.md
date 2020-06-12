@@ -18,3 +18,6 @@ Semester 4 - Computational Methods in Science and Technology course at AGH UST
   - Jacobi method,
   - Gauss-Seidel method,
   - SOR method;
+- lab7 - Monte Carlo,
+- lab8 - Fourier Transform (FFT),
+- lab9 - Ordinary differential equations;
